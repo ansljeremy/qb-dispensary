@@ -54,7 +54,7 @@ function PullOutVehicle()
             TriggerServerEvent('qb-phone:server:sendNewMail', {
             sender = "Boss",
             subject = "Delivery Work",
-            message = "Thanks for helping out, If left a van on the side street ready for you.",
+            message = "Thanks for helping out, I left a van on the side street ready for you.",
             })
             Citizen.Wait(3000)
             TriggerEvent("vehiclekeys:client:SetOwner", GetVehicleNumberPlateText(veh))
@@ -82,7 +82,7 @@ Citizen.CreateThread(function()
                     ["x"] = Config.Zones.Vehicle.Pos.x,
                     ["y"] = Config.Zones.Vehicle.Pos.y,
                     ["z"] = Config.Zones.Vehicle.Pos.z + 1}
-                DrawText3Ds(GaragePos["x"],GaragePos["y"],GaragePos["z"], "[~g~G~s~] Part time Smoke On The Water delivery driver")
+                DrawText3Ds(GaragePos["x"],GaragePos["y"],GaragePos["z"], "[~g~G~s~] Become a part time Smoke On The Water delivery driver")
                 if dist <= 3.0 then
                     if IsControlJustReleased(0, 47) then
                         PullOutVehicle()
@@ -295,7 +295,7 @@ end
 function DeliverDispensary()
     if not DispensaryDelivered then
         dist = 27
-        QBCore.Functions.Progressbar("sell_dispensary1", "Delivery dispensary products..", 3000, false, false, {
+        QBCore.Functions.Progressbar("sell_dispensary1", "Delivering dispensary products...", 3000, false, false, {
             disableMovement = true,
             disableCarMovement = true,
             disableMouse = false,
