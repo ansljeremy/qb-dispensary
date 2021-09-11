@@ -3,6 +3,7 @@ game 'gta5'
 
 description 'QB-Dispensary'
 version '1.0.0'
+author 'ActuallyStrez'
 
 shared_scripts { 
 	'@qb-core/import.lua',
